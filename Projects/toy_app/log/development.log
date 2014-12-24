@@ -638,3 +638,434 @@ Started GET "/assets/application-f654761ee6a5c52b970be60a1e79500a.js?body=1" for
   [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/microposts" for 127.0.0.1 at 2014-12-20 21:30:15 -0800
+Processing by MicropostsController#index as HTML
+  [1m[36mMicropost Load (0.3ms)[0m  [1mSELECT "microposts".* FROM "microposts"[0m
+  Rendered microposts/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 214ms (Views: 210.9ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/microposts/3" for 127.0.0.1 at 2014-12-20 21:43:35 -0800
+Processing by MicropostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"WluWsBCkyBdp5d/UWhO9kMiankHmZZGKDwyXi/4i6vlStvTp1B5rjSxqi/udmuSx4EswpOtDvp49iBF/nqurmg==", "id"=>"3"}
+  [1m[35mMicropost Load (15.6ms)[0m  SELECT  "microposts".* FROM "microposts" WHERE "microposts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (18.4ms)[0m  DELETE FROM "microposts" WHERE "microposts"."id" = ?  [["id", 3]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/microposts
+Completed 302 Found in 52ms (ActiveRecord: 36.4ms)
+
+
+Started GET "/microposts" for 127.0.0.1 at 2014-12-20 21:43:35 -0800
+Processing by MicropostsController#index as HTML
+  [1m[35mMicropost Load (0.2ms)[0m  SELECT "microposts".* FROM "microposts"
+  Rendered microposts/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 188ms (Views: 186.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds-bc9b4389499bcb5a004f7bd04a660c0e.css?body=1" for 127.0.0.1 at 2014-12-20 21:43:35 -0800
+
+
+Started GET "/assets/jquery-ea2706bc2d0586731b7c00ec2cd0a414.js?body=1" for 127.0.0.1 at 2014-12-20 21:43:35 -0800
+
+
+Started GET "/assets/jquery_ujs-29277b946c1d3754af13672bfec0c660.js?body=1" for 127.0.0.1 at 2014-12-20 21:43:35 -0800
+
+
+Started GET "/assets/users-069e88c06b889877799890854d7f4c40.css?body=1" for 127.0.0.1 at 2014-12-20 21:43:35 -0800
+
+
+Started GET "/assets/users-8f6eecd1178ef85964369ec66d33c4f1.js?body=1" for 127.0.0.1 at 2014-12-20 21:43:35 -0800
+
+
+Started GET "/assets/turbolinks-3a7cdb8630f3e86770867bd488a098e0.js?body=1" for 127.0.0.1 at 2014-12-20 21:43:35 -0800
+
+
+Started GET "/assets/application-f654761ee6a5c52b970be60a1e79500a.js?body=1" for 127.0.0.1 at 2014-12-20 21:43:35 -0800
+
+
+Started GET "/assets/application-ac607368be27d92110998de5c9687dbe.css?body=1" for 127.0.0.1 at 2014-12-20 21:43:35 -0800
+
+
+Started GET "/assets/microposts-8f6eecd1178ef85964369ec66d33c4f1.js?body=1" for 127.0.0.1 at 2014-12-20 21:43:35 -0800
+
+
+Started GET "/assets/microposts-069e88c06b889877799890854d7f4c40.css?body=1" for 127.0.0.1 at 2014-12-20 21:43:35 -0800
+
+
+Started GET "/users/new" for 127.0.0.1 at 2014-12-20 21:43:40 -0800
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (2.2ms)
+  Rendered users/new.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 9ms
+
+ArgumentError (First argument in form cannot contain nil or be empty):
+  app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb___900404559065812042_70149203143020'
+  app/views/users/new.html.erb:3:in `_app_views_users_new_html_erb___3530524911381985107_70149203111240'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_source.erb (9.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (36.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-20 21:43:53 -0800
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 209ms (Views: 106.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/microposts-069e88c06b889877799890854d7f4c40.css?body=1" for 127.0.0.1 at 2014-12-20 21:43:54 -0800
+
+
+Started GET "/assets/application-ac607368be27d92110998de5c9687dbe.css?body=1" for 127.0.0.1 at 2014-12-20 21:43:54 -0800
+
+
+Started GET "/assets/jquery_ujs-29277b946c1d3754af13672bfec0c660.js?body=1" for 127.0.0.1 at 2014-12-20 21:43:54 -0800
+
+
+Started GET "/assets/scaffolds-bc9b4389499bcb5a004f7bd04a660c0e.css?body=1" for 127.0.0.1 at 2014-12-20 21:43:54 -0800
+
+
+Started GET "/assets/users-069e88c06b889877799890854d7f4c40.css?body=1" for 127.0.0.1 at 2014-12-20 21:43:54 -0800
+
+
+Started GET "/assets/jquery-ea2706bc2d0586731b7c00ec2cd0a414.js?body=1" for 127.0.0.1 at 2014-12-20 21:43:54 -0800
+
+
+Started GET "/assets/turbolinks-3a7cdb8630f3e86770867bd488a098e0.js?body=1" for 127.0.0.1 at 2014-12-20 21:43:54 -0800
+
+
+Started GET "/assets/application-f654761ee6a5c52b970be60a1e79500a.js?body=1" for 127.0.0.1 at 2014-12-20 21:43:54 -0800
+
+
+Started GET "/assets/microposts-8f6eecd1178ef85964369ec66d33c4f1.js?body=1" for 127.0.0.1 at 2014-12-20 21:43:54 -0800
+
+
+Started GET "/assets/users-8f6eecd1178ef85964369ec66d33c4f1.js?body=1" for 127.0.0.1 at 2014-12-20 21:43:54 -0800
+
+
+Started GET "/users/new" for 127.0.0.1 at 2014-12-20 21:43:55 -0800
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (2.4ms)
+  Rendered users/new.html.erb within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 7ms
+
+ArgumentError (First argument in form cannot contain nil or be empty):
+  app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb___900404559065812042_70149257824900'
+  app/views/users/new.html.erb:3:in `_app_views_users_new_html_erb___3530524911381985107_70149257793360'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_source.erb (9.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (28.8ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2014-12-20 21:43:56 -0800
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (1.7ms)
+  Rendered users/new.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 6ms
+
+ArgumentError (First argument in form cannot contain nil or be empty):
+  app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb___900404559065812042_70149203143020'
+  app/views/users/new.html.erb:3:in `_app_views_users_new_html_erb___3530524911381985107_70149203111240'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_source.erb (15.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (34.8ms)
+
+
+Started POST "/users/console/repl_sessions/8/trace" for 127.0.0.1 at 2014-12-20 21:44:06 -0800
+
+
+Started POST "/users/console/repl_sessions/8/trace" for 127.0.0.1 at 2014-12-20 21:44:12 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (12.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/users/new" for 127.0.0.1 at 2014-12-20 21:46:01 -0800
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (2.7ms)
+  Rendered users/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 148ms (Views: 128.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/microposts-069e88c06b889877799890854d7f4c40.css?body=1" for 127.0.0.1 at 2014-12-20 21:46:02 -0800
+
+
+Started GET "/assets/jquery-ea2706bc2d0586731b7c00ec2cd0a414.js?body=1" for 127.0.0.1 at 2014-12-20 21:46:02 -0800
+
+
+Started GET "/assets/scaffolds-bc9b4389499bcb5a004f7bd04a660c0e.css?body=1" for 127.0.0.1 at 2014-12-20 21:46:02 -0800
+
+
+Started GET "/assets/application-ac607368be27d92110998de5c9687dbe.css?body=1" for 127.0.0.1 at 2014-12-20 21:46:02 -0800
+
+
+Started GET "/assets/users-069e88c06b889877799890854d7f4c40.css?body=1" for 127.0.0.1 at 2014-12-20 21:46:02 -0800
+
+
+Started GET "/assets/jquery_ujs-29277b946c1d3754af13672bfec0c660.js?body=1" for 127.0.0.1 at 2014-12-20 21:46:02 -0800
+
+
+Started GET "/assets/turbolinks-3a7cdb8630f3e86770867bd488a098e0.js?body=1" for 127.0.0.1 at 2014-12-20 21:46:02 -0800
+
+
+Started GET "/assets/microposts-8f6eecd1178ef85964369ec66d33c4f1.js?body=1" for 127.0.0.1 at 2014-12-20 21:46:02 -0800
+
+
+Started GET "/assets/users-8f6eecd1178ef85964369ec66d33c4f1.js?body=1" for 127.0.0.1 at 2014-12-20 21:46:02 -0800
+
+
+Started GET "/assets/application-f654761ee6a5c52b970be60a1e79500a.js?body=1" for 127.0.0.1 at 2014-12-20 21:46:02 -0800
+
+
+Started POST "/users" for 127.0.0.1 at 2014-12-20 21:46:04 -0800
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ldbnz6aHGfDYxU/on922RFpF2hdinwtiKHncHZ0sOX+dO4WWYj26ap1KG8dYVO9lcpR08m+5JHYa/Vrp/aV4HA==", "user"=>{"name"=>"", "email"=>""}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  Rendered users/_form.html.erb (3.8ms)
+  Rendered users/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 143ms (Views: 138.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/microposts-069e88c06b889877799890854d7f4c40.css?body=1" for 127.0.0.1 at 2014-12-20 21:46:04 -0800
+
+
+Started GET "/assets/scaffolds-bc9b4389499bcb5a004f7bd04a660c0e.css?body=1" for 127.0.0.1 at 2014-12-20 21:46:04 -0800
+
+
+Started GET "/assets/application-ac607368be27d92110998de5c9687dbe.css?body=1" for 127.0.0.1 at 2014-12-20 21:46:04 -0800
+
+
+Started GET "/assets/jquery-ea2706bc2d0586731b7c00ec2cd0a414.js?body=1" for 127.0.0.1 at 2014-12-20 21:46:04 -0800
+
+
+Started GET "/assets/users-069e88c06b889877799890854d7f4c40.css?body=1" for 127.0.0.1 at 2014-12-20 21:46:04 -0800
+
+
+Started GET "/assets/jquery_ujs-29277b946c1d3754af13672bfec0c660.js?body=1" for 127.0.0.1 at 2014-12-20 21:46:04 -0800
+
+
+Started GET "/assets/turbolinks-3a7cdb8630f3e86770867bd488a098e0.js?body=1" for 127.0.0.1 at 2014-12-20 21:46:04 -0800
+
+
+Started GET "/assets/microposts-8f6eecd1178ef85964369ec66d33c4f1.js?body=1" for 127.0.0.1 at 2014-12-20 21:46:04 -0800
+
+
+Started GET "/assets/users-8f6eecd1178ef85964369ec66d33c4f1.js?body=1" for 127.0.0.1 at 2014-12-20 21:46:04 -0800
+
+
+Started GET "/assets/application-f654761ee6a5c52b970be60a1e79500a.js?body=1" for 127.0.0.1 at 2014-12-20 21:46:04 -0800
+
+
+Started POST "/users" for 127.0.0.1 at 2014-12-20 21:46:14 -0800
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KxtPFa6dHlwLd1Ic72kiOlFxPstMunqKV1xXZLnv23sj9i1Maie9xk74BjMo4HsbeaCQLkGcVZ5l2NGQ2WaaGA==", "user"=>{"name"=>"blah", "email"=>"blah"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "blah"], ["email", "blah"], ["created_at", "2014-12-21 05:46:14.066380"], ["updated_at", "2014-12-21 05:46:14.066380"]]
+  [1m[35m (29.3ms)[0m  commit transaction
+Redirected to http://127.0.0.1:3000/users/1
+Completed 302 Found in 35ms (ActiveRecord: 29.8ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-12-20 21:46:14 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 96ms (Views: 94.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/microposts-069e88c06b889877799890854d7f4c40.css?body=1" for 127.0.0.1 at 2014-12-20 21:46:14 -0800
+
+
+Started GET "/assets/application-ac607368be27d92110998de5c9687dbe.css?body=1" for 127.0.0.1 at 2014-12-20 21:46:14 -0800
+
+
+Started GET "/assets/scaffolds-bc9b4389499bcb5a004f7bd04a660c0e.css?body=1" for 127.0.0.1 at 2014-12-20 21:46:14 -0800
+
+
+Started GET "/assets/users-069e88c06b889877799890854d7f4c40.css?body=1" for 127.0.0.1 at 2014-12-20 21:46:14 -0800
+
+
+Started GET "/assets/jquery_ujs-29277b946c1d3754af13672bfec0c660.js?body=1" for 127.0.0.1 at 2014-12-20 21:46:14 -0800
+
+
+Started GET "/assets/jquery-ea2706bc2d0586731b7c00ec2cd0a414.js?body=1" for 127.0.0.1 at 2014-12-20 21:46:14 -0800
+
+
+Started GET "/assets/turbolinks-3a7cdb8630f3e86770867bd488a098e0.js?body=1" for 127.0.0.1 at 2014-12-20 21:46:14 -0800
+
+
+Started GET "/assets/microposts-8f6eecd1178ef85964369ec66d33c4f1.js?body=1" for 127.0.0.1 at 2014-12-20 21:46:14 -0800
+
+
+Started GET "/assets/users-8f6eecd1178ef85964369ec66d33c4f1.js?body=1" for 127.0.0.1 at 2014-12-20 21:46:14 -0800
+
+
+Started GET "/assets/application-f654761ee6a5c52b970be60a1e79500a.js?body=1" for 127.0.0.1 at 2014-12-20 21:46:14 -0800
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2014-12-20 21:46:17 -0800
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/_form.html.erb (1.9ms)
+  Rendered users/edit.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 148ms (Views: 145.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-12-20 21:46:19 -0800
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 136ms (Views: 135.0ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/users/1" for 127.0.0.1 at 2014-12-20 21:46:21 -0800
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"C21vHDnI55L2WCA006BNPRGZvoC67izr5vEveW50L10DgA1F/XJECLPXdBsUKRQcOUgQZbfIA//UdamNDv1uPg==", "id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 1]]
+  [1m[36m (5.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 8ms (ActiveRecord: 5.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-12-20 21:46:21 -0800
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 75ms (Views: 73.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/microposts-069e88c06b889877799890854d7f4c40.css?body=1" for 127.0.0.1 at 2014-12-20 21:46:21 -0800
+
+
+Started GET "/assets/scaffolds-bc9b4389499bcb5a004f7bd04a660c0e.css?body=1" for 127.0.0.1 at 2014-12-20 21:46:21 -0800
+
+
+Started GET "/assets/jquery-ea2706bc2d0586731b7c00ec2cd0a414.js?body=1" for 127.0.0.1 at 2014-12-20 21:46:21 -0800
+
+
+Started GET "/assets/users-069e88c06b889877799890854d7f4c40.css?body=1" for 127.0.0.1 at 2014-12-20 21:46:21 -0800
+
+
+Started GET "/assets/application-ac607368be27d92110998de5c9687dbe.css?body=1" for 127.0.0.1 at 2014-12-20 21:46:21 -0800
+
+
+Started GET "/assets/jquery_ujs-29277b946c1d3754af13672bfec0c660.js?body=1" for 127.0.0.1 at 2014-12-20 21:46:21 -0800
+
+
+Started GET "/assets/turbolinks-3a7cdb8630f3e86770867bd488a098e0.js?body=1" for 127.0.0.1 at 2014-12-20 21:46:21 -0800
+
+
+Started GET "/assets/microposts-8f6eecd1178ef85964369ec66d33c4f1.js?body=1" for 127.0.0.1 at 2014-12-20 21:46:21 -0800
+
+
+Started GET "/assets/users-8f6eecd1178ef85964369ec66d33c4f1.js?body=1" for 127.0.0.1 at 2014-12-20 21:46:21 -0800
+
+
+Started GET "/assets/application-f654761ee6a5c52b970be60a1e79500a.js?body=1" for 127.0.0.1 at 2014-12-20 21:46:21 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-23 19:06:35 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (9.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (11.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 764ms (Views: 712.9ms | ActiveRecord: 11.6ms)
+
+
+Started GET "/assets/microposts-069e88c06b889877799890854d7f4c40.css?body=1" for 127.0.0.1 at 2014-12-23 19:06:37 -0800
+
+
+Started GET "/assets/scaffolds-bc9b4389499bcb5a004f7bd04a660c0e.css?body=1" for 127.0.0.1 at 2014-12-23 19:06:37 -0800
+
+
+Started GET "/assets/users-069e88c06b889877799890854d7f4c40.css?body=1" for 127.0.0.1 at 2014-12-23 19:06:37 -0800
+
+
+Started GET "/assets/application-ac607368be27d92110998de5c9687dbe.css?body=1" for 127.0.0.1 at 2014-12-23 19:06:37 -0800
+
+
+Started GET "/assets/jquery-ea2706bc2d0586731b7c00ec2cd0a414.js?body=1" for 127.0.0.1 at 2014-12-23 19:06:37 -0800
+
+
+Started GET "/assets/jquery_ujs-29277b946c1d3754af13672bfec0c660.js?body=1" for 127.0.0.1 at 2014-12-23 19:06:37 -0800
+
+
+Started GET "/assets/turbolinks-3a7cdb8630f3e86770867bd488a098e0.js?body=1" for 127.0.0.1 at 2014-12-23 19:06:37 -0800
+
+
+Started GET "/assets/microposts-8f6eecd1178ef85964369ec66d33c4f1.js?body=1" for 127.0.0.1 at 2014-12-23 19:06:37 -0800
+
+
+Started GET "/assets/application-f654761ee6a5c52b970be60a1e79500a.js?body=1" for 127.0.0.1 at 2014-12-23 19:06:37 -0800
+
+
+Started GET "/assets/users-8f6eecd1178ef85964369ec66d33c4f1.js?body=1" for 127.0.0.1 at 2014-12-23 19:06:37 -0800
+
+
+Started GET "/users/new" for 127.0.0.1 at 2014-12-23 19:13:26 -0800
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (161.9ms)
+  Rendered users/new.html.erb within layouts/application (176.7ms)
+Completed 200 OK in 274ms (Views: 268.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-12-23 19:13:43 -0800
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pYVdSBrf0gwIevTVsUaIz7z2VDOdW7dK6FSMrBcW60Z4zN8+0EnhdqYZVQutmQ+9VgTGiR5JmttL/WQDlagx2Q==", "user"=>{"name"=>"HMoney$pivey", "email"=>"enrico567@gmail.com"}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (22.8ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "HMoney$pivey"], ["email", "enrico567@gmail.com"], ["created_at", "2014-12-24 03:13:43.496525"], ["updated_at", "2014-12-24 03:13:43.496525"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/users/2
+Completed 302 Found in 56ms (ActiveRecord: 24.5ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-12-23 19:13:43 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 177ms (Views: 147.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-12-23 19:13:49 -0800
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 120ms (Views: 119.2ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/users/2" for 127.0.0.1 at 2014-12-23 19:13:55 -0800
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"K8b97SySgvZkE3d6RqyfSQTR5LPhVoCb4B12ZUnF11L2j3+b5gSxjMpw1qRacxg77iN2CWJErQpDtJ7Ky3sNzQ==", "id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 2]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 5ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-12-23 19:13:55 -0800
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 70ms (Views: 69.4ms | ActiveRecord: 0.2ms)
